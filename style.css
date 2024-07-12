@@ -286,8 +286,8 @@ section {
 
 .about-pic {
   border-radius: 2rem;
+  margin-top: 28px; /* Adjust image down */
 }
-
 .arrow {
   position: absolute;
   right: -5rem;

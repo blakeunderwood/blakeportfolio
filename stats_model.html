@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Blog Overview</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">&larr;exit blog</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="blog_overview.html">Blog Overview</a></li>
+								<li><a href="stats_concepts.html">Stats Concepts</a></li>
+								<li><a href="linear_regression.html">Linear Regression</a></li>
+								<li><a href="classification.html">Classification</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>Lorem ipsum</h3>
+											<p>Feugiat tempus veroeros dolor</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Dolor sit amet</h3>
+											<p>Sed vitae justo condimentum</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Feugiat veroeros</h3>
+											<p>Phasellus sed ultricies mi congue</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Etiam sed consequat</h3>
+											<p>Porta lectus amet ultricies</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="#" class="button large fit">Log In</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">Statisitcal models</a></h2>
+										<p>Understanding the fundamental formula to statistical learning</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2015-11-01">July 10, 2024</time>
+										<a href="#" class="author"><span class="name">Blake U.</span><img src="assets/profile.PNG" alt="" /></a>
+									</div>
+								</header>
+                                <h3>Part 1: Introduction to Statistical Models</h3>
+                                <p>Statistical models can be thought of as a set of input variables called predictors and an output variable called the response. The objective of any statistical model is to assess the association between predictors and the response variable. We often write a formula: Y = f(X) + error. Here, Y represents the response variable, X represents the predictors, and 'f' is an unknown function that we aim to estimate in order to better understand the relationship between X and Y.</p>
+                            
+                                <h3>Part 2: Prediction</h3>
+                                <p>Let's take an example: we are asked to provide advice to new college undergraduates on how they should allocate their time based on the starting salaries of past graduates. We can extract data that contains three variables we believe will be important to starting salary: hours studying, hours interning, and hours blogging. Additionally, we need data on the starting salaries of past undergraduate students. To answer our initial question, we can plot three simple least squares fits of salary to each of the three variables. The plots can visually show how each predictor influences starting salary. <img src="path/to/your/image.jpg" alt="Plots showing least squares fit for each predictor"></p>
+                            
+                                <h3>Part 3: Inference</h3>
+                                <p>Another important type of question we might ask is about understanding the relationships between variables, such as: "Which metric has the greatest impact on starting salary?" This is an inference question because it seeks to understand the causal relationships between the predictors and the response variable. We can analyze the relationship between the response and each predictor by estimating their effects. Some predictors may have a positive relationship with Y, indicating that increasing the predictor is associated with increasing values of Y. Conversely, other predictors may have a negative relationship, where increasing the predictor decreases Y. Understanding these relationships helps us make informed decisions based on the data.</p>
+                                <p>To address this inference question, we could create a model that looks at the marginal effects of each predictor on the response variable. This involves estimating the coefficients of each predictor in a multiple regression model, such as Y = β0 + β1X1 + β2X2 + β3X3 + ε, where Y is the starting salary, X1, X2, and X3 represent hours studying, hours interning, and hours blogging, respectively, and β1, β2, and β3 are the coefficients that measure the effect of each predictor on Y. By examining these coefficients, we can determine which predictor has the greatest impact on starting salaries.</p>
+                            
+                                <h3>Proposed Inference Question</h3>
+                                <p>An example of another inference question could be: "How does the number of internship hours influence starting salary across different fields of study?" This question aims to explore the causal effect of internship hours on starting salary while considering the potential variability across different fields of study. By analyzing this, we can understand not just if internship hours matter, but how their impact varies depending on the field of study, providing more nuanced insights.</p>
+								<footer>
+									<ul class="stats">
+									  <li>
+										<a href="stats_concepts.html" >Stats Concepts &rarr;</a>
+									  </li>
+									</ul>
+								  </footer>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/blake-underwood-b1867a252/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.kaggle.com/blakeunderwood" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
+							<li><a href="https://github.com/blakeunderwood" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:ublake7@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p>made with &hearts; by Blake Underwood</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
