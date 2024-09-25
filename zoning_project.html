@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<title>Blake Underwood</title>
+		<link rel="stylesheet" href="Community_assests/css/main.css" />
+		<noscript><link rel="stylesheet" href="Community_assests/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="mediaqueries.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+
+						<article class="thumb">
+							<a href="community_images/fulls/partone.png" class="image"><img src="community_images/thumbs/partone.png" alt="" /></a>
+							<p>The next 4 slides will show the data collection process for this project. In this part of the project we collected data from city zoning laws and zoning maps in order to build our zoning project dataset stored in multiple files for arcGIS. </p>
+						</article>
+
+						<article class="thumb">
+                            <a href="community_images/fulls/data_encode.png" class="image">
+                                <img src="community_images/thumbs/data_encoding.png" alt="" />
+                            </a>
+                            <div class="heading-and-button">
+                                <h2>Data Collection</h2>
+                                <button class="btn-custom" onclick="location.href='assets/art_intro.pdf'">More Details</button>
+                            </div>
+                            <p>In this first step of the zoning guide project the team and I are trying to build data in arcGIS like you see in the image above by using a cities zoning ordinance (as of sept. 2024 we've done 166 cities).</p>
+                        </article> 
+						
+						<article class="thumb">
+							<a href="community_images/fulls/retrieval.png" class="image"><img src="community_images/thumbs/retrieval.png" alt="" /></a>
+							<p>Starting with no data we first collect data from each cities zoning ordinance. We collect data on zoning district, bulk regulations, off-street parking, mobile homes, and other information regarding housing.</p>
+						</article>
+
+						<article class="thumb">
+							<a href="community_images/fulls/data_integration.png" class="image"><img src="community_images/thumbs/data_integration.png" alt="" /></a>
+							<p>After collecting the data from the zoning ordinance we put all our data for each city on a single dataset.</p>
+						</article>
+
+						<article class="thumb">
+							<a href="community_images/fulls/merge.png" class="image"><img src="community_images/thumbs/merge.png" alt="" /></a>
+							<p>In this final stage of the data collection phase we check to see if we have a shapefile for the given city we are working on(example above does). If we do then we merge the shapefile data with the encoded data in arcGIS otherwise we go to georeferencing which is our next step.</p>
+						</article>
+
+						<article class="thumb">
+							<a href="community_images/fulls/parttwo.png" class="image"><img src="community_images/thumbs/parttwo.png" alt="" /></a>
+							<p>The next 4 slides will show the georeferencing process. We contacted the city hall members to see if they had a shapefile for there zoning map available. If they only had a pdf map then we had to convert that into a shapefile by georeferencing in arcGIS.</p>
+						</article> 
+
+						<article class="thumb">
+							<a href="community_images/fulls/boundary.png" class="image"><img src="community_images/thumbs/boundary.png" alt="" /></a>
+							<p>I start by converting the pdf zoning map in a tiff file usually done in photoshop. I open the city boundary file and outline each city boundary line in red. Lastly I import my new tiff file into the city boundary file and use the georeference function in arcGIS to align the tiff file image along the correct city boundary in this case West Union.</p>
+						</article>
+
+						<article class="thumb">
+							<a href="community_images/fulls/districts.png" class="image"><img src="community_images/thumbs/districts.png" alt="" /></a>
+							<p>With the map layers aligned, I will proceed to create district polygons using ArcGIS's "Create Features" tool. By tracing new polygons over the district lines delineated in the TIFF file map, I will generate the necessary shapefile data for West Union's individual districts.</p>
+						</article>
+
+						<article class="thumb">
+                            <a href="community_images/fulls/tracing.png" class="image">
+                                <img src="community_images/thumbs/tracing.png" alt="" />
+                            </a>
+                            <div class="heading-and-button">
+                                <h2>Shapefile Created</h2>
+                                <button class="btn-custom" onclick="location.href='assets/changes.mp4'">View demo</button>
+                            </div>
+                            <p>After maping each district I am usually left with about a 100 different polygons so I use pairwise dissolve or the merge tool to combine the polygons based on there correct district, lastly I check to make sure the shapes I created line up with the tiff map, I started with as demonstrated in the video here.</p>
+                        </article> 
+
+
+						<article class="thumb">
+                            <a href="community_images/fulls/zoning_guide.png" class="image">
+                                <img src="community_images/thumbs/zoning_guide.png" alt="" />
+                            </a>
+                            <div class="heading-and-button">
+                                <h2>Zoning Guide Preview</h2>
+                                <button class="btn-custom" onclick="location.href='https://indicators.extension.iastate.edu/izg/'">View</button>
+                            </div>
+                            <p>This is an example of what one city (Oskaloosa) looks like in our final product. The zoning ordinance data is being used for the side panel, and the zoning map data is used for the city visual. When the zoning Guide is done you will be able to view zoning maps for 330 cities at the link above.</p>
+						</article>  
+					</div>
+			</div>
+		<footer class="footer" style="margin-top: 60px; margin-bottom: -100px;">
+				<nav>
+				  <div class="nav-links-container" >
+					<ul class="nav-links">
+					  <li><a href="index.html#about">About</a></li>
+					  <li><a href="index.html#experience">Experience</a></li>
+					  <li><a href="index.html#projects">Projects</a></li>
+					  <li><a href="index.html#contact">Contact</a></li>
+					</ul>
+				  </div>
+				</nav>
+			</footer>
+		<!-- Scripts -->
+			<script src="Community_assests/js/jquery.min.js"></script>
+			<script src="Community_assests/js/jquery.poptrox.min.js"></script>
+			<script src="Community_assests/js/browser.min.js"></script>
+			<script src="Community_assests/js/breakpoints.min.js"></script>
+			<script src="Community_assests/js/util.js"></script>
+			<script src="Community_assests/js/main.js"></script>
+			<script src="script.js"></script>
+
+	</body>
+</html>

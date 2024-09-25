@@ -29,6 +29,7 @@ a,
 
 /* DESKTOP NAV */
 
+
 nav,
 .nav-links {
   display: flex;
@@ -260,6 +261,21 @@ section {
 
 .btn-container {
   gap: 1rem;
+}
+
+.heading-and-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem; 
+}
+
+.heading-and-button h2 {
+  margin: 0; 
+}
+
+.heading-and-button .btn {
+  margin-left: 20px;
 }
 
 /* ABOUT SECTION */

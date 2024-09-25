@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Blake Underwood">
+<meta name="dcterms.date" content="2024-07-26">
+
+<title>Iowa Housing Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="housing_blog_files/libs/clipboard/clipboard.min.js"></script>
+<script src="housing_blog_files/libs/quarto-html/quarto.js"></script>
+<script src="housing_blog_files/libs/quarto-html/popper.min.js"></script>
+<script src="housing_blog_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="housing_blog_files/libs/quarto-html/anchor.min.js"></script>
+<link href="housing_blog_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="housing_blog_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="housing_blog_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="housing_blog_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="housing_blog_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="housing_blog_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="housing_blog_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="housing_blog_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Iowa Housing Analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Blake Underwood </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 26, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="housing-affordability-for-iowa" class="level1">
+<h1>Housing Affordability for Iowa</h1>
+<p>The housing market, has been significantly impacted by recent economic trends. A surge in housing costs, coupled with rising interest rates, has made housing less affordable for many Iowans. I aim to provide insights into the current state of housing affordability in Iowa and identify potential areas for improvement.</p>
+<p>This section of the report examines four key indicators of housing affordability:</p>
+<ol type="1">
+<li>Homeownership rates.</li>
+<li>Housing and rental prices.</li>
+<li>Relative income levels.</li>
+<li>Mortgage interest rate.</li>
+</ol>
+<section id="iowa-homeownership-rate" class="level2">
+<h2 class="anchored" data-anchor-id="iowa-homeownership-rate">Iowa Homeownership Rate</h2>
+<p>Iowans primarily reside in two housing arrangements: owning a home or renting a home. A small percentage of the population falls outside these categories. We know most people would rather own a home, so a lower homeownership rate could be an indicator that less people are able to afford a home and settling for renting.</p>
+<p><a href="imgs/homeownership_plot.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/homeownership_plot.png" class="img-fluid"></a></p>
+<p>Currently, homeownership stands at 72%, a figure that, while higher than the national average of 65%, has been on a steady decline since the dot-com bubble in 2001. This trend places Iowa’s homeownership rate at a level comparable to its 1984 standing.</p>
+<p><a href="imgs/iowa_housing_sankey.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="imgs/iowa_housing_sankey.png" class="img-fluid"></a></p>
+<p>The median home value in Iowa hovers around $220,000, with a corresponding monthly mortgage payment of approximately $1,500. For renters, the median monthly gross rent is about $1,000. Although this may not seem high on a national level for Iowans the cost of owning and renting a home has increased significantly from just a couple years ago.</p>
+<section id="homeownership-insight" class="level4">
+<h4 class="anchored" data-anchor-id="homeownership-insight">Homeownership Insight</h4>
+<p>Between 2000 and 2018, homeownership declined, likely due to the relative affordability of renting compared to home buying. However, a shift occurred around 2018, with homeownership rates beginning to climb. This change is potentially linked to a reversal in affordability trends, as renting became increasingly expensive relative to homeownership.</p>
+<p><a href="imgs/one.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/one.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="housing-and-renting-prices" class="level2">
+<h2 class="anchored" data-anchor-id="housing-and-renting-prices">Housing and Renting Prices</h2>
+<p><a href="imgs/Home_and_rent_value_plot.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/Home_and_rent_value_plot.png" class="img-fluid"></a></p>
+<p>Home values in Iowa have surged in recent years. Between April 2016 and April 2024, home prices increased by a substantial 55.21%. While overall inflation during the same period was 31.05%, a significant portion of this inflation can be attributed to rising housing costs. In fact, it’s estimated that one-third of U.S. inflation is directly linked to changes in home prices. This suggests that the growth in Iowa home values has outpaced the broader inflationary trend</p>
+<p>The median rent in Iowa currently sits at $1,175, reflecting a significant 6.8% increase compared to the previous year (Rent.com, 2024). Iowa ranks eighth in the nation for the largest increase in median gross rent in the last year (Rent.com, 2024).</p>
+<section id="housing-vs.-renting-insight" class="level4">
+<h4 class="anchored" data-anchor-id="housing-vs.-renting-insight">Housing Vs. Renting Insight</h4>
+<p>The cost to buy a home has been increasing a faster rate then the cost to rent in the last 8 years.</p>
+<p><a href="imgs/two.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/two.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="are-incomes-increasing-enough" class="level2">
+<h2 class="anchored" data-anchor-id="are-incomes-increasing-enough">Are Incomes Increasing Enough?</h2>
+<p><a href="imgs/income_home_rent_plot.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/income_home_rent_plot.png" class="img-fluid"></a></p>
+<p>The average Iowan is noticing house prices rising faster than incomes. Housing affordability has changed in Iowa. This is more evidence that housing is becoming less affordable for Iowans. Home value increased more income from 2019-2022. Low interest rates certainly are a good explanation for this. Demand changes due to population changes may be another good reason for this, both of which we will touch on in later sections.</p>
+<p>The rental market presents a contrasting narrative to homeownership. While housing prices surged during the pandemic, rental costs remained relatively stable. However, recent data indicates a shift in this trend. Rents in Iowa have experienced rapid growth in 2023 and 2024, coinciding with the Federal Reserve’s interest rate hikes. This accelerated rental cost increase warrants further investigation to understand its implications for Iowa residents.</p>
+<section id="income-insight" class="level4">
+<h4 class="anchored" data-anchor-id="income-insight">Income Insight</h4>
+<p>The cost to buy a home has far exceeded incomes while incomes have kept up with the cost of renting.</p>
+<p><a href="imgs/three.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/three.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="consider-interest-rates" class="level2">
+<h2 class="anchored" data-anchor-id="consider-interest-rates">Consider Interest Rates</h2>
+<p>Generally, the housing market slows down when interest rates are higher or increasing. When interest rates rise, the cost of owning a home becomes more expensive due to the higher interest payments, which reduces demand. This reduction in demand then results in a drop in home prices. Conversely, when interest rates are lowered, housing demand increases, causing prices to rise.</p>
+<p><a href="imgs/mortgage_rates_plot.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/mortgage_rates_plot.png" class="img-fluid"></a></p>
+<p>From 2016 to 2022, mortgage interest rates were on a downward trend, making homeownership more affordable and stimulating the housing market. However, starting in 2022, there was a sharp spike in interest rates for 30-year mortgage loans, jumping from around 3% to 7%. This could help explain why rent costs were still pretty affordable through 2022, and would explain why they would of increased once it become to expensive to own a home from increased interest rates.</p>
+<p>You might wonder why, despite this increase in interest rates, home values continued to rise during the same period. This scenario is especially concerning for Iowa’s first-time homebuyers. They faced the double burden of elevated home prices and higher interest rates compared to just two years prior, in 2024. This situation makes entering the housing market significantly more challenging and expensive, potentially delaying or even preventing many from achieving homeownership.</p>
+</section>
+<section id="mortgage-costs-in-context" class="level2">
+<h2 class="anchored" data-anchor-id="mortgage-costs-in-context">Mortgage Costs in Context</h2>
+<p>The median home listed on Zillow in 2022 was sold for around $200,000. If you were to buy a typical house in early 2022, the interest rates for a 30-year loans would be around 3% assuming you have normal credit you would have a monthly mortgage cost of $843.21(bankrate loan calculator). Had you instead waited 2 more years to get that same house in late 2023 or early 2024 that same home would cost $220,000 and the interest rate would of risen to 7.7% meaning that your monthly costs would be $1,568.51 per month for the same house.</p>
+<p><a href="imgs/four.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/four.png" class="img-fluid"></a></p>
+<p><a href="imgs/five.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/five.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="why-housing-prices-rise" class="level1">
+<h1>Why Housing Prices Rise</h1>
+<p>The FED plans on lower interest rates over the next year making homes more affordable on that front but what about house prices? I have identified 4 reasons that I believe increase house prices I want to investigate that help explain why house prices increase:</p>
+<ol type="1">
+<li>Construction is not keeping up with demand for homes.</li>
+<li>The housing Dilemma.</li>
+<li>Investors are speculating on the market.</li>
+<li>People are taking on greater debt to get homes.</li>
+</ol>
+<section id="reason-one" class="level2">
+<h2 class="anchored" data-anchor-id="reason-one">Reason one</h2>
+<section id="construction-hasnt-kept-up-with-the-number-of-people-who-need-a-home." class="level3">
+<h3 class="anchored" data-anchor-id="construction-hasnt-kept-up-with-the-number-of-people-who-need-a-home.">Construction hasn’t kept up with the number of people who need a home.</h3>
+<p>Rising costs to build a home is often the most common reason people give for rising house prices. Basic supply and demand tell us that if more people are looking to buy homes and fewer people are looking to sell, then prices will rise. A potential way to get an idea of housing supply is to examine the number of housing units, but it is a little bit more complicated to get housing demand, but I’m going to analyze change in population. We know that if population is increase we can expect more demand for houses. So viewing the change in housing units compared to the change in population is a logical place to start. However it’s important to note that more housing then people per household size may be built, but this doesn’t mean that construction is keeping up with demand.</p>
+<p><a href="imgs/built_vs_used_homes_plot.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/built_vs_used_homes_plot.png" class="img-fluid"></a></p>
+<p>Change in household size is calculated by dividing the population change by 2.4 which is the average household size in Iowa.</p>
+<p>When we look at how many houses are being built compared to the changing population in Iowa, we see rising housing construction but slowing population growth; you would intuitively think housing prices would decrease because the housing supply would increase faster than demand. However, this graph isn’t saying that. All this graph proves is that new house construction per population level is going down, but this doesn’t mean there isn’t enough housing.</p>
+<p><a href="imgs/Housing_Population_scatterplot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="imgs/Housing_Population_scatterplot.png" class="img-fluid"></a></p>
+<p>When looking at the cities of Iowa, we see a direct correlation between the change in housing supply and the change in population, and we can see that there does appear to be more cities with a slighter greater change in housing supply than population. So this begs the question why could this be happening? Isn’t this evidence that there isn’t a housing shortage in Iowa?</p>
+<p>The population may not be outgrowing the new housing supply but there are still a few problems that could be contributing to a housing shortage. I have identified 3 potential problems that occur when you just analyze the change in housing vs.&nbsp;the change in population:</p>
+<section id="house-deteriorating-problem." class="level4">
+<h4 class="anchored" data-anchor-id="house-deteriorating-problem.">House deteriorating problem.</h4>
+<ul>
+<li>We don’t know how long houses have lasted in this period.  If homes are lasting longer or aren’t that old then we shouldn’t need to build as many home new homes for the growing population. In our case the opposite appears to be true the median year all the houses in Iowa were built in is 1965, with 26.9% being built before 1940(ISU indicators). For many homes there expected life span is going to be around 60 years meaning that many of Iowa’s homes would be ready for replacement and that should be causing greater construction of new homes regardless of population growth. It does seem that home deterioration may be a factor into why change in housing is exceeding change in population in Iowa.</li>
+</ul>
+<p><a href="imgs/six.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/six.png" class="img-fluid"></a></p>
+</section>
+<section id="household-size-changes-problem." class="level4">
+<h4 class="anchored" data-anchor-id="household-size-changes-problem.">Household size changes problem.</h4>
+<ul>
+<li>More homes are actually needed to accommodate for roughly the same amount of people but who want to live with less people. This will result in a greater need for housing regardless of population growth. But this is more of a historical reason for why house prices have risen in the past in Iowa, because household size has actually become quite steady around 2.4 people per household in Iowa with even an increase in household size after the housing crisis of 2008, which household sizes have stayed elevated ever since. We can see that in the last decade household size has been relatively stable.</li>
+</ul>
+<p><a href="imgs/average_household_size_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="imgs/average_household_size_plot.png" class="img-fluid"></a></p>
+<p>It doesn’t appear that in the last decade household size changes can be attributed to why change in housing development has exceeded change in population in Iowa.</p>
+</section>
+<section id="vacancies-are-increasing-in-certain-areas-problem." class="level4">
+<h4 class="anchored" data-anchor-id="vacancies-are-increasing-in-certain-areas-problem.">Vacancies are increasing in certain areas problem.</h4>
+<ul>
+<li>Given that people are moving from rural Iowa to more urban areas, it may appear that housing supply is sufficient but actually the houses are in the wrong place and therefore being left vacant. This would result in an oversupply of housing in rural areas and an undersupply of housing in urban areas. We can see that house prices are increasing significantly more in urban areas which helps provide some evidence to this occurring. When we look at state-wide vacancy rates, we see they have been trending downward, but before the pandemic was very stable overall.  When analyzing the data we see that migration from rural to urban areas in Iowa has actually been slowing down and we don’t have strong evidence to the claim that people in rural areas are leaving more homes vacant driving up urban housing costs.</li>
+</ul>
+</section>
+</section>
+<section id="conclusion-to-construction-reason" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-to-construction-reason">Conclusion to Construction Reason</h3>
+<p>So I looked deeper into housing production relative to population changing. We saw that enough housing is being built for the growing population, but we still can’t rule out that we aren’t experiencing a housing shortage because many houses in Iowa may be expiring and in need of reconstruction. However we can rule out that this is occurring due to housing vacancies or changes in household size.</p>
+<p><a href="imgs/seven.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/seven.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="reason-two" class="level2">
+<h2 class="anchored" data-anchor-id="reason-two">Reason Two</h2>
+<section id="the-housing-dilemma" class="level3">
+<h3 class="anchored" data-anchor-id="the-housing-dilemma">The Housing Dilemma</h3>
+<p>The development of affordable housing often presents a classic “tragedy of the commons” scenario. While constructing more apartments can alleviate housing shortages and potentially lower overall costs, it frequently faces opposition from existing homeowners. This resistance stems from concerns about property values, increased traffic, and potential changes to neighborhood character.</p>
+<p>When the individual interests of homeowners trumps the broader community interest in affordable housing this can contributing to rising house costs.</p>
+<p><a href="imgs/urban_permits.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/urban_permits.png" class="img-fluid"></a></p>
+<p><a href="imgs/suburban_permits.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/suburban_permits.png" class="img-fluid"></a></p>
+<p><a href="imgs/rural_permits.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/rural_permits.png" class="img-fluid"></a></p>
+<p>We can see that Iowa’s more populated urban area’s are more willing to allow for multi-family in order to lower housing costs than Iowa’s suburban and rural area’s. Because Iowa is significantly more rural and suburban than urban, we should expect Iowa to be more effected by increases in single-family houses then by multi-family housing.</p>
+<p><a href="imgs/eight.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/eight.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="reason-three" class="level2">
+<h2 class="anchored" data-anchor-id="reason-three">Reason Three</h2>
+<section id="excessive-speculation" class="level3">
+<h3 class="anchored" data-anchor-id="excessive-speculation">Excessive Speculation</h3>
+<p>If houses were purely consumption goods like cars, food, etc., then explaining house prices purely based on supply and demand would be sufficient because the only economic factors affecting house prices would be the number of people who want a house and the number of houses available, unfortunately sometimes people treat housing as an investment and buy up houses expecting the prices to rise, when many people start doing this is drive up housing prices and causes a housing bubble.</p>
+<p><a href="imgs/vacancies_plot.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/vacancies_plot.png" class="img-fluid"></a></p>
+<p>One quick way to get an idea about whether we are experiencing a housing bubble is to look at housing vacancies. We should assume that vacancies should be decreasing as housing costs go up. But This doesn’t always happen though during the 2009 bubble massive house speculation increased housing prices despite the fact that more properties were left empty, vacancy rates in the U.S. peaked at 11.1% in 2009 and has been trending down since.</p>
+<p>If you recall from my previous vacancy rate graph housing vacancies are trending down since 2006 in Iowa but have been on the rise since 2016 but it’s way below any alarming levels at this point.</p>
+<p><a href="imgs/nine.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/nine.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="reason-four" class="level2">
+<h2 class="anchored" data-anchor-id="reason-four">Reason Four</h2>
+<section id="financialization-of-housing" class="level3">
+<h3 class="anchored" data-anchor-id="financialization-of-housing">Financialization of Housing</h3>
+<p>lower interest rates, can be a double-edged sword for housing prices. While it allows more people to enter the market. Buyers with lower interest rates can afford larger mortgages, pushing up housing prices to reflect the increased buying power. This can create a situation where cheaper debt isn’t necessarily translating to greater affordability.</p>
+<p><a href="imgs/ten.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/ten.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="conclusion-on-iowas-housing-affordability" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-on-iowas-housing-affordability">Conclusion on Iowa’s Housing Affordability</h2>
+<p>To get a general sense of Iowa’s housing market we looked at 4 pillars of housing:</p>
+<ol type="1">
+<li>Home ownership rates.</li>
+<li>Housing and rental prices.</li>
+<li>Relative income levels.</li>
+<li>Mortgage interest rate.</li>
+</ol>
+<p>After looking at these 4 metrics for analyzing housing we realized that Iowans were buying less homes, housing and renting prices were skyrocketing, income kept up with rents for awhile and hasn’t kept up at all with housing prices, interest rates have been elevated the last 2 years in an attempt to cool down the market, and many other insights.</p>
+<p>But these insights weren’t telling the entire story because we didn’t have a strong case for why house prices were increasing so much even despite hikes in interest rates. So we looked at four reasons why housing prices may be rising:</p>
+<ul>
+<li>Construction is not keeping up with demand for homes.</li>
+<li>The housing Dilemma.</li>
+<li>Investors are speculating on the market.</li>
+<li>People are taking on greater debt to get homes.</li>
+</ul>
+<p>After looking at these reasons we found that construction may be keeping up with demand and can’t be blamed for the housing shortage, we may be under producing multi-family housing in Iowa, which makes Iowa effected more by rises in single-family housing cost changes, there isn’t great evidence that we are experiencing a housing bubble even though vacancies have been rising since 2016 in Iowa, and Iowans didn’t take on to much debt to buy there homes.</p>
+<p><a href="imgs/eleven.png" class="lightbox" data-gallery="Gallery1"><img src="imgs/eleven.png" class="img-fluid"></a></p>
+<hr>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+
+
+</body></html>

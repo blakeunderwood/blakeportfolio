@@ -1,0 +1,32 @@
+---
+title: "Iowa Median Income"
+author: "Blake_Underwood"
+date: "2024-07-17"
+output: html_document
+---
+
+
+```{r}
+library(tidycensus)
+library(dplyr)
+
+# Median Income data from census bureau 
+get_income_data <- function(year) {
+  get_acs(
+    geography = "state",
+    variables = "B19013_001",
+    state = "IA",
+    year = year,
+    survey = "acs5"
+  ) %>%
+    mutate(year = year)
+}
+
+years <- 2016:2022
+income_data <- bind_rows(lapply(years, get_income_data))
+
+head(income_data)
+
+```
+
+
